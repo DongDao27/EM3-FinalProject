@@ -1,11 +1,11 @@
 {
   "project": "THUTHANH-EM3",
-  "at": "2026-11-06T04:03:33+07:00",
+  "at": "2026-11-06T04:08:57+07:00",
   "project_path": "D:/THUTHANH-EM3",
   "current_task_id": "M05",
   "next_task_id": "M05",
-  "last_completed_task_id": "M23",
-  "implementation_state": "D89_EM3_source_published_verified",
+  "last_completed_task_id": "M24",
+  "implementation_state": "D90_final_project_readme_refined",
   "stack": {
     "frontend": "Next.js",
     "backend": "Express",
@@ -601,7 +601,7 @@
       "owner Figma V34 native review"
     ]
   },
-  "last_checkpoint_at": "2026-11-06T04:03:33+07:00",
+  "last_checkpoint_at": "2026-11-06T04:08:57+07:00",
   "D85": {
     "status": "local_verified",
     "task_id": "M21",
@@ -671,5 +671,14 @@
     "authorization": "D89 explicit owner request",
     "state": "source_pushed_and_CI_verified",
     "receipt_commit": "documentation-only commit follows tested source SHA; query Git for its hash"
+  },
+  "D90": {
+    "at": "2026-11-06T04:08:57+07:00",
+    "scope": "README and setup/checkpoint documentation only",
+    "readme": "concise final project overview without Dxx history",
+    "setup": "docs/SETUP.md",
+    "checks": "Prettier, repo structure, local markdown links, diff-check passed",
+    "business_tests": "not_rerun_docs_only; D88/D89 verified source unchanged",
+    "publication_authorization": "D89 continues; Git remote HEAD identifies latest docs commit"
   }
 }

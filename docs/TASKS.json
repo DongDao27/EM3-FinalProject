@@ -327,6 +327,22 @@
         "GitHub Actions observation"
       ],
       "notes": "Verified source commit and its CI. Following receipt commit changes only documentation; final live CI remains available on repository Actions."
+    },
+    {
+      "id": "M24",
+      "title": "D90: concise professional final-project README",
+      "phase": "DOCUMENTATION",
+      "status": "done",
+      "depends_on": ["M23"],
+      "files": ["README.md", "docs/SETUP.md"],
+      "acceptance": [
+        "Concise overview/stack/features/quickstart/testing/docs with no internal update history",
+        "Detailed setup/admin/database instructions preserved in SETUP with valid local links",
+        "Prettier/repo checks pass; no app/env/data changes"
+      ],
+      "required_checks": ["Prettier", "check-repo", "markdown local links", "diff-check"],
+      "evidence": ["README.md", "docs/SETUP.md", ".runtime/d90-doc-check.log"],
+      "notes": "Docs-only; business tests not repeated. D89 publication authorization continues."
     }
   ]
 }

@@ -93,3 +93,7 @@ D89 M23 publication authorized to DongDao27/EM3-FinalProject, in_progress before
 ## D89 — 2026-11-06T04:03:33+07:00 — M23 publication done
 
 Owner authorized repo DongDao27/EM3-FinalProject. Initial source commit e8d1f073b3d02344fd94c0c4a2b396ecd8e1f993 pushed to main without force; remote SHA verified. Source workflow 42108454030 completed success: https://github.com/DongDao27/EM3-FinalProject/actions/runs/42108454030. Git staged456sourcefiles, no private/runtime/deps; basic token/private-key scan empty. Original schema trailing blank EOF normalized; docs Prettier/check passed. No deploy/real provider/mail. This following receipt commit changes docs only, so last_verified_commit identifies tested source commit rather than inventing self-referential SHA.
+
+## D90 — 2026-11-06T04:08:57+07:00 — M24 done
+
+README EM3 rewritten as concise final-project overview/stack/features/quickstart/testing/docs with CI badge; Dxx history removed from README. Original detailed DB/env/admin/worker/payment/SMTP instructions preserved in docs/SETUP.md with adjusted relative links. Prettier/check-repo/local links/diff-check passed; no new business tests for docs-only change. D89 authorization retained for commit/push main; private env/data/app/UI unchanged. Source test SHA e8d1f07 remains verified; current Git HEAD gives docs commit hash.

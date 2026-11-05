@@ -1,3 +1,11 @@
+# Hiện hành D90 — 2026-11-06T04:08:57+07:00
+
+M24 done: README ngắn gọn cho final project, setup dài chuyển docs/SETUP.md. Docs checks passed; không đổi application/env/data. Commit/push README theo quyền D89 vẫn giữ. Bản zip source local được dựng lại sau commit; Git HEAD/remote là hash tài liệu mới, last_verified_commit giữ SHA source app e8d1f07 đã test. Không cần lặp backend/E2E chỉ vì sửa văn bản.
+
+Tiếp theo: review README trên repo; provider/SMTP/native canvas/production acceptance vẫn là phần riêng.
+
+## Bàn giao trước (lịch sử)
+
 # Hiện hành D89 — 2026-11-06T04:03:33+07:00
 
 M23 done: owner-requested EM3 source published to https://github.com/DongDao27/EM3-FinalProject on main. Verified source commit `e8d1f073b3d02344fd94c0c4a2b396ecd8e1f993`; remote matches; source Actions success: https://github.com/DongDao27/EM3-FinalProject/actions/runs/42108454030. Full D88 local checks remain in PRE-SUBMISSION-CHECK.md.

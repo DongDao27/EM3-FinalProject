@@ -58,3 +58,7 @@ Chủ dự án yêu cầu xác minh MySQL EM3/Laravel có dùng chung, kiểm tr
 ## D89 — Publication theo yêu cầu chủ dự án (06/11/2026)
 
 Cho phép commit/push riêng EM3 tới https://github.com/DongDao27/EM3-FinalProject, không publish bản khác. Repo đích đã kiểm tra trống. Acceptance: full verify/E2E D88 đạt, staged paths/secret scan sạch, initial commit main và non-force push, xác minh SHA remote/Actions, ghi receipt thật. Không deploy/real payment/email.
+
+## D90 — README cho final project (06/11/2026)
+
+Owner yêu cầu README chuyên nghiệp, ngắn gọn cho bài final. Phạm vi EM3 vừa publish: giữ overview/công nghệ/chức năng/quickstart/test/docs; bỏ lịch sử Dxx và ghi chú nội bộ khỏi README, chuyển chi tiết setup hiện có sang docs/SETUP.md để không mất hướng dẫn DB/secret/admin/SMTP. Acceptance trước thay README: đúng stack/source/scripts, đủ link setup, không bịa tên môn/nhóm/giảng viên, links và Prettier/check-repo đạt; docs-only, không chạy lại business E2E. Quyền publish D89 tiếp tục cho cập nhật repo này; không sửa bản khác/env/data.
