@@ -1,3 +1,11 @@
+# Hiện hành D89 — 2026-11-06T04:03:33+07:00
+
+M23 done: owner-requested EM3 source published to https://github.com/DongDao27/EM3-FinalProject on main. Verified source commit `e8d1f073b3d02344fd94c0c4a2b396ecd8e1f993`; remote matches; source Actions success: https://github.com/DongDao27/EM3-FinalProject/actions/runs/42108454030. Full D88 local checks remain in PRE-SUBMISSION-CHECK.md.
+
+Following receipt commit only updates metadata/docs; Git and remote HEAD are the authoritative latest hash. Next: source ZIP in output/submission or clone repository to review/nộp. Do not re-bootstrap/reset owner data. Both apps retain Next.js; EM3 V35 unchanged. Provider/SMTP/native canvas/production gates still external. Private env/storage retained and excluded from Git.
+
+## Lịch sử bàn giao
+
 # Hiện hành D88 — 2026-11-06T03:57:40+07:00
 
 M22 done local. Xem [PRE-SUBMISSION-CHECK](PRE-SUBMISSION-CHECK.md). Full backend/API/build/typecheck/E2E23/audits/Figma passed. Same MySQL3307 but separate databases/test schemas. Private env/main data preserved.

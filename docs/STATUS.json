@@ -1,11 +1,11 @@
 {
   "project": "THUTHANH-EM3",
-  "at": "2026-11-05T03:44:34+07:00",
+  "at": "2026-11-06T04:03:33+07:00",
   "project_path": "D:/THUTHANH-EM3",
-  "current_task_id": "M23",
-  "next_task_id": "M23",
-  "last_completed_task_id": "M22",
-  "implementation_state": "D89_EM3_publication_in_progress",
+  "current_task_id": "M05",
+  "next_task_id": "M05",
+  "last_completed_task_id": "M23",
+  "implementation_state": "D89_EM3_source_published_verified",
   "stack": {
     "frontend": "Next.js",
     "backend": "Express",
@@ -16,11 +16,9 @@
   "frontend_gate": "local_verified",
   "ready_for_local_testing": true,
   "ready_for_source_commit": true,
-  "last_verified_commit": null,
-  "git_dirty": true,
+  "last_verified_commit": "e8d1f073b3d02344fd94c0c4a2b396ecd8e1f993",
+  "git_dirty": false,
   "branch": "main",
-  "commits_created": 0,
-  "staged_files": 0,
   "deployment_scope": "excluded_by_owner_request_D73",
   "configuration": {
     "private_env": "backend/.env",
@@ -603,7 +601,7 @@
       "owner Figma V34 native review"
     ]
   },
-  "last_checkpoint_at": "2026-11-06T03:57:40+07:00",
+  "last_checkpoint_at": "2026-11-06T04:03:33+07:00",
   "D85": {
     "status": "local_verified",
     "task_id": "M21",
@@ -638,7 +636,7 @@
     "no_schema_main_data_env_provider_mutations": true,
     "remaining": "native_Figma_owner_reimport; realmerchant/nativebankQR/SMTP/release acceptance external"
   },
-  "notes": "D85 cash/checkoutQR/landing sync and full local tests verified; owner reimports V35, realprovider/SMTP/release external; no commits.",
+  "notes": "D89 source publication verified; source CI success. This receipt is documentation-only. Current Git HEAD/remote are authoritative. Local D88 checks passed; provider/production acceptance remains external.",
   "D88": {
     "at": "2026-11-06T03:57:40+07:00",
     "report": "docs/PRE-SUBMISSION-CHECK.md",
@@ -657,10 +655,21 @@
     "source_archive": "output/submission/ThuThanh-EM3-source-2026-11-06.zip"
   },
   "source_publication": {
-    "authorization": "D89 explicit owner request",
+    "at": "2026-11-06T04:03:33+07:00",
     "target": "DongDao27/EM3-FinalProject",
     "branch": "main",
-    "state": "pending_initial_commit",
-    "verified_source_commit": null
+    "verified_source_commit": "e8d1f073b3d02344fd94c0c4a2b396ecd8e1f993",
+    "remote_sha_matches": true,
+    "ci_source_run": {
+      "conclusion": "success",
+      "databaseId": 42108454030,
+      "status": "completed",
+      "url": "https://github.com/DongDao27/EM3-FinalProject/actions/runs/42108454030"
+    },
+    "publication": "initial source push verified",
+    "private_config": "excluded; env hash unchanged",
+    "authorization": "D89 explicit owner request",
+    "state": "source_pushed_and_CI_verified",
+    "receipt_commit": "documentation-only commit follows tested source SHA; query Git for its hash"
   }
 }

@@ -306,7 +306,7 @@
       "id": "M23",
       "title": "D89: initial commit and publish requested repository",
       "phase": "PUBLICATION",
-      "status": "in_progress",
+      "status": "done",
       "depends_on": ["M22"],
       "files": ["docs/STATUS.json"],
       "acceptance": [
@@ -314,13 +314,19 @@
         "main non-force push and remote SHA verified",
         "Workflow outcome recorded honestly"
       ],
-      "evidence": ["Owner D89 request; empty repository confirmed"],
+      "evidence": [
+        "e8d1f073b3d02344fd94c0c4a2b396ecd8e1f993",
+        "https://github.com/DongDao27/EM3-FinalProject/actions/runs/42108454030",
+        "Remote main SHA matches local; clean worktree after source commit",
+        "Staged source456files excludes private/runtime/dependency paths"
+      ],
       "required_checks": [
         "staged paths/secret scan",
         "git commit and non-force push",
         "remote SHA",
         "GitHub Actions observation"
-      ]
+      ],
+      "notes": "Verified source commit and its CI. Following receipt commit changes only documentation; final live CI remains available on repository Actions."
     }
   ]
 }
