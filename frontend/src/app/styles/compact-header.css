@@ -1,0 +1,130 @@
+/* One navigation row; mobile keeps full search and reachable 44px controls. */
+.site-header:not(.admin-site-header) {
+  background: var(--brand);
+  padding: 0;
+}
+.site-header:not(.admin-site-header) .header-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 16px;
+  min-height: 88px;
+  padding-block: 16px;
+}
+.site-header:not(.admin-site-header) .brand {
+  flex: 0 0 220px;
+  width: 220px;
+  max-width: none;
+}
+.header-inner > .category-menu {
+  flex: 0 0 auto;
+  color: white;
+}
+.header-inner > .category-menu > summary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #ffffff1a;
+  white-space: nowrap;
+  font-size: 14px;
+  color: white;
+}
+.site-header:not(.admin-site-header) .header-search {
+  position: relative;
+  flex: 1 1 240px;
+  min-width: 0;
+  width: auto;
+  grid-column: auto;
+  grid-row: auto;
+  margin: 0;
+}
+.site-header:not(.admin-site-header) .header-actions {
+  flex: 0 0 auto;
+  margin: 0;
+  gap: 12px;
+}
+.site-header .header-action,
+.site-header .account-menu > summary {
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
+}
+.partners-section {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+  padding-top: 24px;
+}
+.partners-section h2 {
+  margin: 0;
+  font-size: 22px;
+  color: var(--brand);
+}
+.partners-section .brand-carousel {
+  border: 0;
+  padding-block: 16px 24px;
+}
+@media (max-width: 1100px) {
+  .site-header:not(.admin-site-header) .brand {
+    flex-basis: 170px;
+    width: 170px;
+  }
+  .site-header .header-action > span,
+  .site-header .account-menu > summary > span {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .site-header:not(.admin-site-header) .header-inner {
+    gap: 4px;
+    min-height: 72px;
+    padding-block: 12px;
+    width: calc(100% - 16px);
+  }
+  .site-header:not(.admin-site-header) .brand {
+    flex-basis: 72px;
+    width: 72px;
+  }
+  .header-inner > .category-menu > summary {
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    padding: 10px;
+  }
+  .header-inner > .category-menu > summary > span {
+    display: none;
+  }
+  .header-inner > .category-menu .dropdown {
+    position: fixed;
+    inset: 72px 8px auto;
+    width: auto;
+    max-height: calc(100dvh - 168px);
+    overflow-y: auto;
+  }
+  .site-header:not(.admin-site-header) .header-actions {
+    gap: 0;
+  }
+  .site-header:not(.admin-site-header) .header-search input {
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 44px 8px 10px;
+    font-size: 16px;
+  }
+  .site-header .header-search .search-submit {
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    min-height: 44px;
+    right: 0;
+  }
+  .header-search .search-dropdown {
+    position: fixed;
+    inset: 76px 8px auto;
+    max-height: calc(100dvh - 172px);
+  }
+  .partners-section {
+    padding-top: 20px;
+  }
+}

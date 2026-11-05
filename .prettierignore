@@ -1,0 +1,15 @@
+node_modules/
+frontend/.next/
+.runtime/
+output/
+backend/storage/
+backend/database/assets/
+frontend/public/
+package-lock.json
+frontend/next-env.d.ts
+*.tsbuildinfo
+design/figma/code.js
+design/figma/src/
+design/figma/ui.html
+scripts/test-figma.cjs
+.playwright-cli/

@@ -1,0 +1,36 @@
+// Tests share only database connection credentials with the local application.
+// These forced values override even inherited merchant/production configuration.
+export function testEnvironment(base) {
+  return {
+    ...base,
+    NODE_ENV: "test",
+    HOST: "localhost",
+    PORT: "8001",
+    FRONTEND_URL: "http://localhost:3001",
+    DB_HOST: base.DB_HOST || "127.0.0.1",
+    DB_PORT: base.DB_PORT || "3306",
+    DB_USERNAME: base.DB_USERNAME || "thu_thanh_em3",
+    DB_PASSWORD: base.DB_PASSWORD || "",
+    DB_DATABASE: "thu_thanh_em3_test",
+    SESSION_SECRET: "em3-isolated-test-session-secret-only",
+    SESSION_COOKIE: "thuthanh_em3_test",
+    COOKIE_SECURE: "false",
+    VNPAY_DEFERRED: "false",
+    VNPAY_ENV: "sandbox",
+    VNPAY_TMN_CODE: "TESTEM3",
+    VNPAY_HASH_SECRET: "local-test-only-secret",
+    VNPAY_PAYMENT_URL: "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html",
+    VNPAY_QUERY_URL: "",
+    VNPAY_QUERY_IP: "127.0.0.1",
+    VNPAY_RETURN_URL: "http://localhost:3001/payment/vnpay-return",
+    VNPAY_IPN_URL: "",
+    MAIL_TRANSPORT: "disabled",
+    MAIL_HOST: "127.0.0.1",
+    MAIL_PORT: "1025",
+    MAIL_USERNAME: "",
+    MAIL_PASSWORD: "",
+    MAIL_FROM_ADDRESS: "noreply@example.test",
+    MAIL_SECURE: "false",
+    E2E_TESTING: "",
+  };
+}

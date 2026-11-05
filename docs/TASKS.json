@@ -1,0 +1,326 @@
+{
+  "project": "THUTHANH-EM3",
+  "tasks": [
+    {
+      "id": "M19",
+      "title": "Fix native Figma mobile fixed-child and dynamic-page reaction API",
+      "status": "done",
+      "depends_on": ["M18"],
+      "acceptance": [
+        "Strict mock reproduces V32 unsupported property failure",
+        "Parent numberOfFixedChildren and async reactions; review clones not fixed",
+        "Full geometry/routes/rollback/budget checks and ZIP integrity pass"
+      ],
+      "evidence": [
+        "STATUS.json",
+        "../design/figma/src/plugin.js",
+        "../scripts/test-figma.cjs",
+        "../design/figma/HUONG-DAN.md"
+      ]
+    },
+    {
+      "id": "M18",
+      "title": "Bounded Figma V32 import and complete local UI/journey review",
+      "status": "done",
+      "depends_on": ["M17"],
+      "acceptance": [
+        "Single-pass bounded Auto Layout with lower node/depth budget; progress/yield/cancel",
+        "Figma geometry/routes/manual preservation/rollback and all seven flows preserved",
+        "Responsive browser UI/journeys and appropriate source checks pass"
+      ],
+      "evidence": [
+        "STATUS.json",
+        "../design/figma/HUONG-DAN.md",
+        "../scripts/test-figma.cjs",
+        "../frontend/src/components/store-shell.tsx",
+        "../frontend/e2e/store.spec.ts"
+      ]
+    },
+    {
+      "id": "M17",
+      "title": "Single-row blue header, separate partners and Figma Auto Layout components",
+      "status": "done",
+      "depends_on": ["M16"],
+      "acceptance": [
+        "Responsive single row and blue recommendations; original PN logos in separate Partners section",
+        "Figma native Auto Layout/padding and reusable components; journey/layout preserved",
+        "Browser regressions, Figma mock, check/typecheck/build pass"
+      ],
+      "evidence": [
+        "STATUS.json",
+        "../frontend/src/app/styles/compact-header.css",
+        "../frontend/e2e/store.spec.ts",
+        "../scripts/test-figma.cjs",
+        "../design/figma/HUONG-DAN.md"
+      ]
+    },
+    {
+      "id": "M16",
+      "title": "Final local acceptance recheck and honest completion confirmation",
+      "status": "done",
+      "depends_on": ["M15"],
+      "acceptance": [
+        "Re-run local automated suites and Figma package integrity",
+        "Preserve private config/data and distinguish provider/SMTP/canvas external acceptance"
+      ],
+      "evidence": [
+        "STATUS.json",
+        "HANDOFF.md",
+        "../frontend/e2e/store.spec.ts",
+        "../scripts/test-figma.cjs"
+      ]
+    },
+    {
+      "id": "M15",
+      "title": "Compact mobile storefront/footer and Figma V30",
+      "status": "done",
+      "depends_on": ["M14"],
+      "acceptance": [
+        "Reduce fixed mobile whitespace without clipping content or touch targets",
+        "Preserve V29 journeys and desktop layout; mock/E2E responsive pass"
+      ],
+      "evidence": [
+        "../frontend/src/app/styles/mobile-density.css",
+        "../frontend/src/app/styles/bestseller.css",
+        "../design/figma/HUONG-DAN.md",
+        "../scripts/test-figma.cjs",
+        "STATUS.json"
+      ]
+    },
+    {
+      "id": "M14",
+      "title": "Resume purchase intent after authentication and verify V29 logo bundle",
+      "status": "done",
+      "depends_on": ["M13"],
+      "acceptance": [
+        "Buy/add intent and quantity resume after authentication without second choice",
+        "Cancel/admin/failure do not perform unintended or duplicate cart mutations",
+        "V29 bundle original logo hashes and prototype routes pass; preserve layout"
+      ],
+      "evidence": [
+        "../design/figma/HUONG-DAN.md",
+        "../design/figma/build.py",
+        "../scripts/test-figma.cjs",
+        "../frontend/src/components/store-provider.tsx",
+        "../frontend/e2e/store.spec.ts",
+        "STATUS.json"
+      ]
+    },
+    {
+      "id": "M13",
+      "title": "Figma desktop/iPhone 17 Pro synchronization and customer design brief",
+      "status": "done",
+      "depends_on": ["M12"],
+      "acceptance": [
+        "Preserve separate Landing page, 7 flows, max12 frames per row",
+        "Mobile 402x874, current payment/footer/cancellation UI, local geometry and routes verified",
+        "Vietnamese editable brief; live canvas acceptance explicitly pending"
+      ],
+      "evidence": [
+        "../design/figma/HUONG-DAN.md",
+        "../design/figma/manifest.json",
+        "../scripts/test-figma.cjs",
+        "BRIEF-THIET-KE-THU-THANH.docx",
+        "STATUS.json"
+      ]
+    },
+    {
+      "id": "M12",
+      "title": "Single backend env and consolidated project documentation",
+      "status": "done",
+      "depends_on": ["M11"],
+      "acceptance": [
+        "Two env files only, backend private env preserved",
+        "Tests force isolated database and fake provider/mail/session",
+        "Check, test, build and E2E pass; documentation links resolved"
+      ],
+      "evidence": ["../README.md", "STATUS.json", "DATABASE.md"]
+    },
+    {
+      "id": "M11",
+      "title": "Local Sandbox IPN tunnel, diagnostics and callback relay tests",
+      "status": "done",
+      "depends_on": ["M04", "M10"],
+      "acceptance": [
+        "Exact GET-only IPN relay preserves signed query and ACK",
+        "Local/public unsigned connectivity checks without payment mutations",
+        "Provider registration and merchant acceptance remain explicit external steps"
+      ],
+      "evidence": ["VNPAY-SANDBOX.md", "../scripts/tests/vnpay-sandbox.test.mjs", "STATUS.json"]
+    },
+    {
+      "id": "M10",
+      "title": "Local-only scope: remove deployment configuration and instructions",
+      "status": "done",
+      "depends_on": ["M09"],
+      "acceptance": [
+        "No container configuration or active deployment instructions",
+        "Local env, runtime, data and test workflow preserved",
+        "Syntax, format and repository/link checks pass"
+      ],
+      "evidence": ["../README.md", "HANDOFF.md"]
+    },
+    {
+      "id": "M09",
+      "title": "Concise UTF-8 README and database onboarding for clone users",
+      "status": "done",
+      "depends_on": ["M08"],
+      "acceptance": [
+        "Clear database/file roles",
+        "Complete short clone setup",
+        "UTF-8 and local links verified"
+      ],
+      "evidence": ["../README.md", "DATABASE.md"]
+    },
+    {
+      "id": "M00",
+      "title": "Schema/catalog/assets",
+      "status": "done",
+      "depends_on": [],
+      "evidence": ["STATUS.json"]
+    },
+    {
+      "id": "M01",
+      "title": "Auth/session/catalog/cart",
+      "status": "done",
+      "depends_on": ["M00"],
+      "evidence": ["STATUS.json"]
+    },
+    {
+      "id": "M02",
+      "title": "Quote/order/inventory/payment adapter",
+      "status": "done",
+      "depends_on": ["M01"],
+      "evidence": ["STATUS.json"]
+    },
+    {
+      "id": "M03",
+      "title": "Admin/report/recovery/worker",
+      "status": "done",
+      "depends_on": ["M02"],
+      "evidence": ["STATUS.json"]
+    },
+    {
+      "id": "M04",
+      "title": "Local acceptance tests",
+      "status": "done",
+      "depends_on": ["M03"],
+      "evidence": ["STATUS.json"]
+    },
+    {
+      "id": "M05",
+      "title": "Merchant/public HTTPS IPN acceptance",
+      "status": "externally_blocked",
+      "depends_on": ["M04"],
+      "required_input": "Public IPN registration and provider transaction acceptance.",
+      "evidence": []
+    },
+    {
+      "id": "M06",
+      "title": "Optional real SMTP local acceptance",
+      "status": "externally_blocked",
+      "depends_on": ["M04"],
+      "required_input": "Mail service credentials and mailbox for optional local delivery verification.",
+      "evidence": []
+    },
+    {
+      "id": "M08",
+      "title": "Root workspace, source cleanup, runnable E2E and commit readiness",
+      "status": "done",
+      "depends_on": ["M04"],
+      "acceptance": [
+        "One root lockfile/dependency install",
+        "Current-project README, no obsolete source/logs",
+        "Root verify/browser/HTTP pass; data/env preserved"
+      ],
+      "evidence": ["STATUS.json"]
+    },
+    {
+      "id": "M20",
+      "title": "Figma V34 aligned components, ten-rank scrolling and direct card purchase",
+      "status": "done",
+      "depends_on": ["M19"],
+      "acceptance": [
+        "Centered native component content and ten scrollable ranks",
+        "Buy/add once and authentication intent persist",
+        "Both application feeds and browser/typecheck/build checks pass"
+      ],
+      "evidence": ["STATUS.json", "../frontend/e2e/store.spec.ts", "../design/figma/HUONG-DAN.md"]
+    },
+    {
+      "id": "M21",
+      "title": "D85: đồng bộ thu tại quầy/đối tác và audit hai app + plugin V35",
+      "phase": "FRONTEND",
+      "status": "done",
+      "depends_on": ["M20"],
+      "functions": ["F11", "F12", "F13"],
+      "files": ["docs/STATUS.json"],
+      "acceptance": [
+        "Cùng hành vi D84 ở hai app, backend giữ quyền/tiền/tồn/CSRF/idempotency/rollback",
+        "Full backend/browser suites và API/build/typecheck/checks cả hai đạt",
+        "Plugin V35 đúng luồng pickup/cash/QR/complete và partners landing-only, strict API/geometry/rollback/V34-upgrade đạt",
+        "ZIP source parity, preview và QR decode kiểm thật; native canvas chờ người dùng import theo yêu cầu"
+      ],
+      "required_checks": [
+        "full backend",
+        "full browser E2E",
+        "API/build/typecheck",
+        "source checks",
+        "strict Figma both folders",
+        "ZIP/QR/preview/parity"
+      ],
+      "evidence": [
+        "D85 local verified; see STATUS.json and PROGRESS.md",
+        "Full backend and full23-browser-suite passed for both applications",
+        "API7/build22/typecheck/source checks, strict V35 both folders, QR decode, ZIP/source parity passed"
+      ],
+      "notes": "Owner requested offline plugin reimport; native canvas not executed. Real merchant/nativebankQR/SMTP/production acceptance remain external. No commit/push/deploy."
+    },
+    {
+      "id": "M22",
+      "title": "D88: pre-submission DB/UI/E2E/source audit",
+      "phase": "FRONTEND",
+      "status": "done",
+      "depends_on": ["M21"],
+      "files": ["docs/PRE-SUBMISSION-CHECK.md"],
+      "acceptance": [
+        "Separate application/test schemas verified by SQL",
+        "Full backend/API/build/typecheck/E2E23 passed",
+        "Git candidate paths and private env checked"
+      ],
+      "evidence": [
+        "docs/PRE-SUBMISSION-CHECK.md",
+        ".runtime/d88-e2e.log",
+        ".runtime/d88-figma.log"
+      ],
+      "notes": "Local verification; external provider/production gates remain.",
+      "required_checks": [
+        "full backend",
+        "full E2E",
+        "build/typecheck/API",
+        "audits/source checks",
+        "DB/env preservation"
+      ]
+    },
+    {
+      "id": "M23",
+      "title": "D89: initial commit and publish requested repository",
+      "phase": "PUBLICATION",
+      "status": "in_progress",
+      "depends_on": ["M22"],
+      "files": ["docs/STATUS.json"],
+      "acceptance": [
+        "Staged source excludes private/runtime/dependencies",
+        "main non-force push and remote SHA verified",
+        "Workflow outcome recorded honestly"
+      ],
+      "evidence": ["Owner D89 request; empty repository confirmed"],
+      "required_checks": [
+        "staged paths/secret scan",
+        "git commit and non-force push",
+        "remote SHA",
+        "GitHub Actions observation"
+      ]
+    }
+  ]
+}

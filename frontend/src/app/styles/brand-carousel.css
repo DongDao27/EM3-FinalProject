@@ -1,0 +1,62 @@
+.brand-carousel {
+  gap: 14px;
+  padding-block: 28px;
+}
+.brand-carousel .brand-track {
+  scrollbar-width: none;
+  gap: 24px;
+  align-items: center;
+}
+.brand-carousel .brand-track::-webkit-scrollbar {
+  display: none;
+}
+.brand-carousel .brand-tile {
+  flex: 0 0 calc((100% - 96px) / 5);
+  min-width: 0;
+  min-height: 100px;
+  padding: 6px;
+  border: 0;
+  border-radius: 0;
+  justify-content: center;
+  align-items: center;
+}
+.brand-carousel .brand-tile img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+.brand-carousel .brand-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  border-radius: 50%;
+  background: #f6f7f8;
+  border: 1px solid #edf0f4;
+  color: #526071;
+  padding: 0;
+}
+.brand-carousel .brand-arrow:disabled {
+  opacity: 0.35;
+}
+.brand-carousel .brand-track:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .brand-carousel {
+    gap: 4px;
+  }
+  .brand-carousel .brand-tile {
+    flex-basis: calc((100% - 12px) / 2);
+    min-height: 72px;
+  }
+  .brand-carousel .brand-track {
+    gap: 12px;
+  }
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Thiên Long",
+    "src": "/brands/thien-long.png",
+    "width": 220,
+    "height": 65,
+    "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_1.png?v=906",
+    "sha256": "0f622720599f611bc8cdb8828f0714c5459c7bf3bbd187be63699ba619c20483"
+  },
+  {
+    "name": "Faber-Castell",
+    "src": "/brands/faber-castell.png",
+    "width": 220,
+    "height": 65,
+    "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_3.png?v=906",
+    "sha256": "24824778cfe27557099eaece8cc15201173e520dd0cbeff797b4965b6589066a"
+  },
+  {
+    "name": "KEYROAD",
+    "src": "/brands/keyroad.png",
+    "width": 220,
+    "height": 65,
+    "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_4.png?v=906",
+    "sha256": "0dc1a99cd076c0cd0a1f4047619d746f3c25c931ed9dfaa0196517e0c746c7a6"
+  },
+  {
+    "name": "Maped",
+    "src": "/brands/maped.png",
+    "width": 220,
+    "height": 65,
+    "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_5.png?v=906",
+    "sha256": "5da699368e5aa0d922af7b6cbada67b1d8d3d5ada9d665976e7be91863e379f8"
+  },
+  {
+    "name": "MILAN",
+    "src": "/brands/milan.png",
+    "width": 220,
+    "height": 65,
+    "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_6.png?v=906",
+    "sha256": "b32494c710ebdfd3de9d829c0f4a286a203018daf25bc61b0366159e27d57108"
+  },
+  {
+    "name": "Pentel",
+    "src": "/brands/pentel.png",
+    "width": 220,
+    "height": 65,
+    "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_7.png?v=906",
+    "sha256": "36c3475194ae482e58720de03f1d31fbd0129d6fca9f429bb1e3ae55a9f17748"
+  },
+  {
+    "name": "Pilot",
+    "src": "/brands/pilot.png",
+    "width": 220,
+    "height": 65,
+    "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_8.png?v=906",
+    "sha256": "65d1a8adfb8957292f2b7c030368a3e83fd6e7bab11995cbfb8cfe6a780a5dec"
+  },
+  {
+    "name": "Sakos",
+    "src": "/brands/sakos.png",
+    "width": 220,
+    "height": 65,
+    "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_9.png?v=924",
+    "sha256": "a88dd8d62905f823b2a8ee417c9ab2eb80c92ea5079151a6a3b9bd67be8313ff"
+  },
+  {
+    "name": "BITEX",
+    "src": "/brands/bitex.png",
+    "width": 220,
+    "height": 65,
+    "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_10.png?v=906",
+    "sha256": "5e019859fbc69b919eae8c28127098af241e33af09640b5f2eb3c8a9b0112221"
+  },
+  {
+    "name": "TOTY",
+    "src": "/brands/toty.png",
+    "width": 220,
+    "height": 65,
+    "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_11.png?v=924",
+    "sha256": "8da481f2ff775e08550a902cab5a28ab1512722704960d82955ad58995b48b3d"
+  }
+]

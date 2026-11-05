@@ -1,0 +1,47 @@
+{
+  "name": "thuthanh-em3",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Thu Thanh bookstore \u2014 Next.js, Express and MySQL",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "engines": {
+    "node": ">=22.13",
+    "npm": ">=10"
+  },
+  "scripts": {
+    "test:figma": "node scripts/test-figma.cjs",
+    "dev": "node scripts/dev.mjs",
+    "dev:api": "npm run dev --workspace backend",
+    "dev:web": "npm run dev --workspace frontend",
+    "worker": "npm run worker --workspace backend",
+    "payment:tunnel": "node scripts/vnpay-tunnel.mjs",
+    "payment:check": "node scripts/vnpay-check.mjs",
+    "test:payment-tools": "node --test scripts/tests/vnpay-sandbox.test.mjs",
+    "start:api": "npm start --workspace backend",
+    "start:web": "npm start --workspace frontend",
+    "build": "npm run build --workspace frontend",
+    "typecheck": "npm run typecheck --workspace frontend",
+    "db:migrate": "npm run migrate --workspace backend",
+    "db:migrate:test": "npm run migrate:test --workspace backend",
+    "db:seed": "npm run seed --workspace backend",
+    "admin": "npm run admin --workspace backend --",
+    "test": "npm run test:payment-tools && npm run test:backend && npm run test:frontend",
+    "test:backend": "npm test --workspace backend",
+    "test:frontend": "npm run test:api --workspace frontend",
+    "test:http": "node scripts/http-smoke.mjs",
+    "test:e2e": "node scripts/e2e.mjs",
+    "check:repo": "node scripts/check-repo.mjs",
+    "check": "npm run check --workspace backend && npm run format:check && npm run check:repo",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "verify": "npm run check && npm test && npm run build && npm run typecheck"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.5",
+    "prettier": "3.9.10"
+  }
+}

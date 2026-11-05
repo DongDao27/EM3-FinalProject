@@ -1,0 +1,31 @@
+{
+  "header": {
+    "src": "/banners/fahasa-literature.jpg",
+    "width": 1201,
+    "height": 201,
+    "alt": "Xu hướng văn học",
+    "categorySlug": "sach-van-hoc",
+    "background": "#f18b31"
+  },
+  "manga": {
+    "src": "/banners/fahasa-manga.webp",
+    "width": 1920,
+    "height": 700,
+    "alt": "Thế giới manga và truyện tranh",
+    "categorySlug": "truyen-tranh",
+    "background": "#dff2ff"
+  },
+  "kids": {
+    "src": "/banners/fahasa-kids.jpg",
+    "width": 1921,
+    "height": 601,
+    "alt": "Bé ham học hỏi, bé giỏi mỗi ngày",
+    "categorySlug": "sach-giao-khoa",
+    "background": "#fff0b1",
+    "mobile": {
+      "src": "/banners/fahasa-kids-mobile.jpg",
+      "width": 1081,
+      "height": 1081
+    }
+  }
+}

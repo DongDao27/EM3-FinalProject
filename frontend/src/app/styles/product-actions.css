@@ -1,0 +1,76 @@
+.product-actions-block {
+  min-width: 0;
+  width: 100%;
+}
+.product-card > .product-actions-block {
+  margin-top: auto;
+  border-top: 1px solid var(--line);
+  padding: 12px;
+}
+.product-actions {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 48px;
+  gap: 8px;
+  align-items: stretch;
+}
+.product-actions .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 48px;
+  padding: 10px 8px;
+  margin: 0;
+  line-height: 1.25;
+  font:
+    700 14px/1.25 var(--font-store),
+    Arial,
+    sans-serif;
+}
+.product-actions .product-add {
+  width: 48px;
+  padding: 0;
+  color: var(--brand);
+  border: 1px solid var(--action);
+  background: white;
+}
+.product-actions-block .notice {
+  margin-top: 8px;
+}
+.bestseller-rank-panel {
+  min-width: 0;
+  background: white;
+}
+.ranking-hint {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  padding: 12px 16px;
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+.bestseller-ranking {
+  height: 580px;
+  max-height: 580px;
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+  scrollbar-color: #8da4c9 #edf2fa;
+  overscroll-behavior: contain;
+}
+.bestseller-ranking::-webkit-scrollbar {
+  width: 8px;
+}
+.bestseller-ranking::-webkit-scrollbar-track {
+  background: #edf2fa;
+}
+.bestseller-ranking::-webkit-scrollbar-thumb {
+  background: #8da4c9;
+  border-radius: 8px;
+  border: 2px solid #edf2fa;
+}
+@media (max-width: 760px) {
+  .bestseller-ranking {
+    height: 252px;
+    max-height: 252px;
+  }
+}

@@ -1,0 +1,31 @@
+# Hiện hành D88 — 2026-11-06T03:57:40+07:00
+
+M22 done local. Xem [PRE-SUBMISSION-CHECK](PRE-SUBMISSION-CHECK.md). Full backend/API/build/typecheck/E2E23/audits/Figma passed. Same MySQL3307 but separate databases/test schemas. Private env/main data preserved.
+
+M23/D89 in_progress: owner authorized initial EM3 main commit/push to https://github.com/DongDao27/EM3-FinalProject; repo empty. Next: stage/inspect source, commit and push without force, verify SHA/Actions and record receipt.
+
+Source ZIP in output/submission, without private config/dependencies/runtime/business DB/uploads. Logs .runtime/d88-*. Native canvas/provider/SMTP/staging/production not accepted by these local tests.
+
+## Bàn giao trước (lịch sử)
+
+# Bàn giao hiện hành — D85 / M21 — 2026-11-05T03:44:34+07:00
+
+Đã đồng bộ và kiểm chứng local Laravel, EM3 và plugin Figma V35. Laravel146/1978 + full23E2E6.3m; EM3backend54 + full23E2E2.7m + paymenttools4. API7/build22/typecheck mỗi bản, Pint/check/check_pack, QRdecode375px/ZIP/sourceparity đạt. Previewcustomerpickup/adminQR/cash/desktop đã xem.
+
+Plugin mới: output/figma/THUTHANH-FIGMA-V35.zip, guide tại design/figma/HUONG-DAN.md. Hai ZIP byteidentical SHA256 de802d5858e717f03f59f56f37bafd2c60e0482c348fec628336adf8eee16ae0;180khung/3684routes. Giải nén/import manifest V35, chạy Cập nhật thiết kế để thay managedV34; giữ ảnh chỉnhtay và ghi chú. User xác nhận chỉ sửa plugin để tự import, canvas thật chưa chạy.
+
+Source: EM3 payments/vnpay/app + backendtests/e2efixture; frontend cash/QR/order/landing/partners/styles/types; Laravel PaymentService Return-success guard và test; Figma source/build/UI/guide/manifest/mock ở2folder; API/OpenAPI/schema semantics/PRD/checkpoints cập nhật. Không migration.
+
+Không lỗi source local còn tái hiện trong checks này. Các lần fail ban đầu/cách sửa xem PROGRESS D85; không gọi skipped/external là passed. Merchant thật/IPN/query/SMTP/staging/production/nativebankQR vẫn external; QR website chỉ mở VNPAY bằng camera. Tiền mặt là admin xác nhận đã thu đủ; VNPAY chờ bằng chứng server, không Return-only. Backend strict gate external giữ nguyên.
+
+Lệnh tiếp theo: import V35 theo guide. Duyệt web đang chạy thì Ctrl+F5; bản EM3 nếu cần chạy từ D:/THUTHANH-EM3 bằng npm run dev (không chạy bootstrap/reset). Main data/env/APP_KEY/SESSION_SECRET/uploads/owner next-env/.runtime/mysql-data và dirtysource trước đó giữ nguyên. Chưa commit/push; branchmain, git_dirty=true, last_verified_commit=null. QA3100/18082 đã đóng sau fullsuites. Evidence logs .runtime/d85-*, report/screenshot output/e2e; Laravel JUnit backend/storage/logs/phpunit.xml. Backend và E2E của cùng app không chạy đồng thời trên cùng testDB.
+
+## Bàn giao trước D85 — giữ lịch sử
+
+# Bàn giao Thu Thanh EM3 — 04/11/2026
+
+D83 / M20 done local. V34 sửa label component HUG/căn giữa, không stretch; heading Auto Layout;10rank có native viewport/rail fixed/nút SCROLL_TO hạng10. CTAcard/bestseller Mua ngay + iconcart, qty1; guest tiếp tụcđúngýđịnh1lần, đóngauthdirectkhông mởpopup; ảnh/tên đểxemthôngtin/sốlượng. Laravelđãđồngbộheader/footer/mobileCSS và providerintent với EM3, backend/proxy/ports riêng.
+
+Plugin: design/figma/manifest.json, ZIP output/figma/THUTHANH-FIGMA-V34.zip. ĐóngV33/importV34 và Present để thử cuộn; Designwheel chỉ di chuyểncanvas. Giữ Landing riêng/7luồng/max12hàng/402×874/24mẫu/1SKU mua. Strict mock31981node/depth13/170khung/4130actions; componentcenter/HUG/fixedrail/routes/rollback/manualpreservation đạt cả2folder; preview mới đã xem. Nativeowner chưa nghiệmthu.
+
+Thực kiểm EM3backend46, Laravelcatalog10/958assertions+Pint;21E2E mỗi bản, builds22/typecheck/check hoặccheck_pack đạt. Main2database ghim7→10 bằngTT-VH-003/004/005, backupflagtrong.runtime; không tạo doanh số/đơn hoặc đổi giá/tồn. Backendfeed10/sortthựcgiữ. E2E dùng database riêng và provider giả. Không commit/push/deploy/provider/mail; bảo toàn privateenv/APP_KEY/SESSION_SECRET/uploads và MySQL3307. Giữ tất cả dirtysource đã có. Phần ngoài cònmerchant/IPN/SMTP và ownerFigma. Servicesowner không tựchạy; npm run dev tạiEM3 hoặc hướngdẫnLaravel đểduyệt.

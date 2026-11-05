@@ -1,0 +1,26 @@
+# Dependencies/builds
+**/node_modules/
+**/.next/
+**/out/
+**/coverage/
+*.tsbuildinfo
+# Private config
+**/.env
+**/.env.*
+!**/.env.example
+# Runtime/uploads/test output
+/backend/storage/
+/.runtime/
+/output/
+**/test-results/
+**/playwright-report/
+*.log
+*.pid
+*.sql.gz
+# Editor/OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+~$*
+/.playwright-cli/

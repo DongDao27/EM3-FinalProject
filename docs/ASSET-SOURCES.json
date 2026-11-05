@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-23",
+  "banner": {
+    "name": "manga",
+    "source_url": "https://cdn.hstatic.net/files/200001055148/file/banner_1920x600__47_.png",
+    "width": 1920,
+    "height": 600,
+    "sha256": "d4324ffc908b997f84e9b87267ee822afe777efff9a49f7dd203d322393a6872",
+    "local_path": "frontend/public/banners/phuongnam-manga.png"
+  },
+  "brand": {
+    "light": {
+      "path": "frontend/public/brand/logo-light.svg",
+      "sha256": "444faacf7842f61c1203b7fdfb3e7799decfcded415730b2311b52097b4d15b3"
+    },
+    "dark": {
+      "path": "frontend/public/brand/logo-dark.svg",
+      "sha256": "8ebd6498d7cb2921f995bc980d1f33eaa11f3997101a8cccb708bceadc239ebe"
+    }
+  },
+  "product_manifest": "PRODUCT-IMAGE-SOURCES.json",
+  "product_count": 136,
+  "figma_product_count": 24,
+  "brand_design": "Original Constantia outline and book monogram; single-color wordmark; no Phuong Nam lettering/colors",
+  "manufacturers": [
+    {
+      "name": "Thiên Long",
+      "src": "/brands/thien-long.png",
+      "width": 220,
+      "height": 65,
+      "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_1.png?v=906",
+      "sha256": "0f622720599f611bc8cdb8828f0714c5459c7bf3bbd187be63699ba619c20483"
+    },
+    {
+      "name": "Faber-Castell",
+      "src": "/brands/faber-castell.png",
+      "width": 220,
+      "height": 65,
+      "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_3.png?v=906",
+      "sha256": "24824778cfe27557099eaece8cc15201173e520dd0cbeff797b4965b6589066a"
+    },
+    {
+      "name": "KEYROAD",
+      "src": "/brands/keyroad.png",
+      "width": 220,
+      "height": 65,
+      "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_4.png?v=906",
+      "sha256": "0dc1a99cd076c0cd0a1f4047619d746f3c25c931ed9dfaa0196517e0c746c7a6"
+    },
+    {
+      "name": "Maped",
+      "src": "/brands/maped.png",
+      "width": 220,
+      "height": 65,
+      "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_5.png?v=906",
+      "sha256": "5da699368e5aa0d922af7b6cbada67b1d8d3d5ada9d665976e7be91863e379f8"
+    },
+    {
+      "name": "MILAN",
+      "src": "/brands/milan.png",
+      "width": 220,
+      "height": 65,
+      "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_6.png?v=906",
+      "sha256": "b32494c710ebdfd3de9d829c0f4a286a203018daf25bc61b0366159e27d57108"
+    },
+    {
+      "name": "Pentel",
+      "src": "/brands/pentel.png",
+      "width": 220,
+      "height": 65,
+      "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_7.png?v=906",
+      "sha256": "36c3475194ae482e58720de03f1d31fbd0129d6fca9f429bb1e3ae55a9f17748"
+    },
+    {
+      "name": "Pilot",
+      "src": "/brands/pilot.png",
+      "width": 220,
+      "height": 65,
+      "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_8.png?v=906",
+      "sha256": "65d1a8adfb8957292f2b7c030368a3e83fd6e7bab11995cbfb8cfe6a780a5dec"
+    },
+    {
+      "name": "BITEX",
+      "src": "/brands/bitex.png",
+      "width": 220,
+      "height": 65,
+      "source_url": "https://cdn.hstatic.net/themes/200001055148/1001430215/14/home_partner_10.png?v=906",
+      "sha256": "5e019859fbc69b919eae8c28127098af241e33af09640b5f2eb3c8a9b0112221"
+    }
+  ],
+  "additional_banners": [
+    {
+      "name": "new-vietnamese",
+      "source_url": "https://cdn.hstatic.net/files/200001055148/file/banner_slide__47_.png",
+      "width": 900,
+      "height": 506,
+      "sha256": "4fb0ff73fe1843b7c38144fca6004294c8a3c1bbcc8417f067bc5e28362898aa",
+      "src": "/banners/phuongnam-sach-moi.png",
+      "label": "Sách mới tháng này",
+      "local_path": "frontend/public/banners/phuongnam-sach-moi.png"
+    },
+    {
+      "name": "new-books",
+      "source_url": "https://cdn.hstatic.net/files/200001055148/file/banner_slide__48_.png",
+      "width": 900,
+      "height": 506,
+      "sha256": "5d46d2a8c6523df5a458eb3125c950643c9322b09d6cc36b8a0b80499031b8b9",
+      "src": "/banners/phuongnam-new-books.png",
+      "label": "Bộ sưu tập sách mới",
+      "local_path": "frontend/public/banners/phuongnam-new-books.png"
+    }
+  ],
+  "additional_banner_decision": "Owner explicitly chose original Phuong Nam images; unchanged bytes/text/source brand.",
+  "storefront_campaigns_D58": [
+    {
+      "name": "header",
+      "source_page": "https://www.fahasa.com/tu-sach-van-hoc",
+      "source_url": "https://cdn1.fahasa.com/media/wysiwyg/Thang-03-2023/VanHocT323_LDP_Tagname4.jpg",
+      "local_path": "frontend/public/banners/fahasa-literature.jpg",
+      "width": 1201,
+      "height": 201,
+      "sha256": "d7fc08014d0d994ebbd44de07946f6f15dcc150d822dc75dff8cb96c6b4ebd3b",
+      "review": "Visually inspected: no Fahasa logo; original pixels preserved; no numerical discount/voucher/shipping offer; internal category navigation only"
+    },
+    {
+      "name": "manga",
+      "source_page": "https://www.fahasa.com/nhap-hoi-manga-comic",
+      "source_url": "https://cdn1.fahasa.com/media/wysiwyg/Thang-10-2023/Manga_LDP_Mainbanner_web_1920x700.jpg",
+      "local_path": "frontend/public/banners/fahasa-manga.webp",
+      "width": 1920,
+      "height": 700,
+      "sha256": "9c9f05d9c9977219e6873fdf691a14ee78ab473b5bfb520304178b2dde74e863",
+      "review": "Visually inspected: no Fahasa logo; original pixels preserved; no numerical discount/voucher/shipping offer; internal category navigation only"
+    },
+    {
+      "name": "kids",
+      "source_page": "https://www.fahasa.com/trang-thieu-nhi",
+      "source_url": "https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/2024-06_Thieu-nhi/Trangthieunhi_0624__LDPweb_1920x600.jpg",
+      "local_path": "frontend/public/banners/fahasa-kids.jpg",
+      "width": 1921,
+      "height": 601,
+      "sha256": "f4315a176376ae70d766694a7d074cb30fc364c986499f1a3342c71b828f286f",
+      "review": "Visually inspected: no Fahasa logo; original pixels preserved; no numerical discount/voucher/shipping offer; internal category navigation only"
+    },
+    {
+      "name": "kids-mobile",
+      "source_page": "https://www.fahasa.com/trang-thieu-nhi",
+      "source_url": "https://cdn1.fahasa.com/media/wysiwyg/Duy-VHDT/2024-06_Thieu-nhi/Trangthieunhi_0624__LDPapp_1080x1080.jpg",
+      "local_path": "frontend/public/banners/fahasa-kids-mobile.jpg",
+      "width": 1081,
+      "height": 1081,
+      "sha256": "d29a51e2d5d2ec1a5270190d28032f16f8d46a87dfc6e2b7c5bd6b43e6f0bfff",
+      "review": "Visually inspected: no Fahasa logo; original pixels preserved; no numerical discount/voucher/shipping offer"
+    }
+  ]
+}

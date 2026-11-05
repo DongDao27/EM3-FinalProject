@@ -1,0 +1,116 @@
+.payment-result-page {
+  max-width: 1160px;
+}
+.payment-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  gap: 24px;
+  margin: 0;
+  padding: 28px 32px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 16px 16px 0 0;
+}
+.payment-overview div {
+  min-width: 0;
+}
+.payment-overview dt {
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 10px;
+}
+.payment-overview dd {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.payment-overview > div:first-child dd {
+  font-size: 14px;
+  line-height: 1.7;
+}
+.payment-outcome {
+  --outcome-color: #a4620d;
+  --outcome-bg: #fffbeb;
+  padding: 48px 32px;
+  text-align: center;
+  background: var(--outcome-bg);
+  border: 1px solid var(--line);
+  border-top: 0;
+  border-radius: 0 0 16px 16px;
+}
+.payment-outcome--success {
+  --outcome-color: #178248;
+  --outcome-bg: #f0faf4;
+}
+.payment-outcome--failure {
+  --outcome-color: #c92c3b;
+  --outcome-bg: #fff4f5;
+}
+.payment-outcome-icon {
+  display: block;
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 24px;
+  color: var(--outcome-color);
+}
+.payment-outcome h2 {
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.3;
+  margin: 0 0 16px;
+  font-weight: 800;
+}
+.payment-outcome p {
+  max-width: 670px;
+  margin: 0 auto;
+  color: #43546a;
+  line-height: 1.8;
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+.payment-receiving {
+  display: inline-block;
+  margin-top: 18px;
+  color: #43546a;
+  font-size: 14px;
+}
+.payment-outcome .button-row {
+  justify-content: center;
+  margin-top: 28px;
+  gap: 12px;
+}
+.payment-outcome .button {
+  min-height: 48px;
+}
+.payment-orders-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 10px 16px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 600px) {
+  .payment-overview {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 24px;
+    gap: 20px;
+  }
+  .payment-outcome {
+    padding: 32px 20px;
+  }
+  .payment-outcome-icon {
+    width: 96px;
+    height: 96px;
+  }
+  .payment-outcome .button-row {
+    flex-direction: column;
+  }
+  .payment-outcome .button {
+    width: 100%;
+  }
+}

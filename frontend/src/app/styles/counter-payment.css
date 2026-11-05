@@ -1,0 +1,22 @@
+.counter-payment {
+  margin-block: 1rem;
+}
+.counter-payment-qr {
+  text-align: center;
+  margin-block: 1rem;
+}
+.counter-payment-qr img {
+  display: block;
+  width: min(100%, 360px);
+  height: auto;
+  margin-inline: auto;
+  image-rendering: pixelated;
+}
+.counter-payment-success {
+  padding: 1rem;
+  color: var(--ink, #173354);
+  background: #e9f8ed;
+  border-radius: 12px;
+  margin-block: 1rem;
+  text-align: center;
+}
