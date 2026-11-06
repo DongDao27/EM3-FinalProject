@@ -364,9 +364,11 @@
       "evidence": [
         ".runtime/d91-verify.log",
         "docs/DEPLOY-SANDBOX.md",
-        ".runtime/d91-e2e-final.log"
+        ".runtime/d91-e2e-final.log",
+        "fdf719a256614c743962695ceb1dfe03615d663f",
+        "https://github.com/DongDao27/EM3-FinalProject/actions/runs/42251787897"
       ],
-      "notes": "Local verify and full E2E23 passed. Docker build/smoke awaiting CI. Railway account/public URL and real merchant Sandbox IPN pending; no paid upgrade."
+      "notes": "Local verify/E2E23 and GitHub Actions full verify/E2E/container build/production HTTPS smoke passed. Owner will log in to Railway; account connection/public URL and actual merchant Sandbox IPN remain pending. No paid upgrade."
     }
   ]
 }

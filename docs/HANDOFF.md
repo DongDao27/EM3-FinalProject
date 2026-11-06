@@ -1,8 +1,8 @@
 # Hiện hành D91 — 2026-11-06T23:21:11+07:00
 
-M25 in_progress: chuẩn bị Railway trial/free cho EM3 + VNPAY Sandbox. Source runtime/container/HTTPS/storage và hướng dẫn docs/DEPLOY-SANDBOX.md đã thêm. Verify local backend59/API7/tools4/runtime3/build22/typecheck và full E2E23 (2.0m) passed. Máy chưa có Docker; cần kiểm Docker build/smoke trên CI sau push theo quyền D89. Env private giữ nguyên SHA; generated next-env đã phục hồi đúng HEAD.
+M25 in_progress: chuẩn bị Railway trial/free cho EM3 + VNPAY Sandbox. Source runtime/container/HTTPS/storage và hướng dẫn docs/DEPLOY-SANDBOX.md đã thêm. Verify local backend59/API7/tools4/runtime3/build22/typecheck và full E2E23 (2.0m) passed. Source commit fdf719a256614c743962695ceb1dfe03615d663f đã push; Actions42251787897 success, gồm Docker build và production HTTPS smoke web/API/worker. Env private giữ nguyên SHA; generated next-env đã phục hồi đúng HEAD.
 
-Chưa kết nối Railway, chưa public URL, chưa callback merchant thật. Tiếp theo: hoàn tất E2E, kiểm staged source/secrets/env, commit/push EM3, quan sát CI. Sau khi kết nối hosting mới tạo app/MySQL/volume, migrate/seed/admin, public smoke và cấu hình Return/IPN Sandbox. Không nâng gói trả phí, không tiền thật; không reset DB/env/storage. Giữ backend/.env và dữ liệu local.
+Owner xác nhận chưa kết nối Railway và sẽ đăng nhập; chưa public URL hoặc callback merchant thật. Tiếp theo: kết nối hosting, tạo app/MySQL/volume theo docs/DEPLOY-SANDBOX.md, migrate/seed/admin, public smoke và cấu hình Return/IPN Sandbox. Không nâng gói trả phí, không tiền thật; không reset DB/env/storage. Giữ backend/.env và dữ liệu local. Source ZIP D90 cũ hơn cấu hình deploy; dùng GitHub main để lấy source mới nhất. Receipt commit chỉ đổi tài liệu; last_verified_commit là SHA source đã có CI đầy đủ.
 
 ## Lịch sử bàn giao
 
