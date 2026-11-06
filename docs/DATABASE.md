@@ -2,6 +2,8 @@
 
 **Engine:** MySQL 8.4, InnoDB, utf8mb4. Backend Express kết nối bằng thư viện `mysql2`; cấu hình lấy từ `backend/.env`. Connection và thời gian nghiệp vụ dùng UTC, báo cáo tính ngày theo Asia/Ho_Chi_Minh.
 
+Mật khẩu tài khoản mới dùng bcrypt. Login cũng xác minh Argon2id/Argon2i của tài khoản cũ và bcrypt dạng `$2y$`; giữ nguyên hash đang lưu, không yêu cầu đổi mật khẩu chỉ vì chuyển backend.
+
 | Database             | Mục đích                                                            |
 | -------------------- | ------------------------------------------------------------------- |
 | `thu_thanh_em3`      | Dữ liệu ứng dụng: tài khoản, catalog, giỏ, đơn, tồn kho, thanh toán |

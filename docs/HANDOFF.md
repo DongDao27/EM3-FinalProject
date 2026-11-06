@@ -1,3 +1,9 @@
+# D93 legacy password login - 2026-11-07T00:39:01+07:00
+
+M27 done local: root cause Argon2id existing accounts vs bcrypt-only login. Source auth.js now supports Argon2id/Argon2i/bcrypt with argon2@0.45.2; no password reset/rehash/schema changes. Verify passed57 backend/API7/tools4/build22/typecheck/checks; E2E23 passed2.8m; audit0. Source fix published under D89 (Git HEAD identifies commit). Next: tell owner Ctrl+C then npm run dev in D:/THUTHANH-EM3 and use existing admin credentials. Cannot verify owner password without it; fixture tests do verify login/session/admin flow. Preserve owner deletion backend/.env.example (do not stage/restore), .env and all application data.
+
+## Previous handoff (history)
+
 # D92 local Sandbox demo - 2026-11-06T23:55:22+07:00
 
 M26 done local: owner cancelled deploy. M25 cancelled; no Railway/account action needed. Deployment-only source/config removed; local app and CI restored. Demo commands in docs/VNPAY-SANDBOX.md. Verify passed54 backend/API7/tools4/build22/typecheck/checks; full E2E23 passed (2.0m), env SHA unchanged. Next: run dev, payment:tunnel and payment:check for presentation; register current IPN URL with merchant. Source update published under D89; Git HEAD is authoritative receipt hash. No actual Sandbox merchant transaction/IPN verified. Keep backend/.env, MySQL schemas/uploads and all Laravel source.

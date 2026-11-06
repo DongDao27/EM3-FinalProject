@@ -2,6 +2,7 @@ import { test, before, beforeEach, after } from "node:test";
 import assert from "node:assert/strict";
 import request from "supertest";
 import bcrypt from "bcryptjs";
+import * as argon2 from "argon2";
 import sharp from "sharp";
 import { randomUUID } from "node:crypto";
 import { app } from "../src/app.js";
@@ -208,6 +209,46 @@ test("existing $2y$ bcrypt password remains valid", async () => {
   await update("users", customer.id, { password: passwordHash.replace("$2b$", "$2y$") });
   const a = await signedIn();
   await a.get("/api/v1/auth/me").expect(200);
+});
+
+for (const [name, type] of [
+  ["admin", argon2.argon2id],
+  ["customer", argon2.argon2i],
+])
+  test(`existing Argon2 ${name} credentials preserve password and session permissions`, async () => {
+    const u = name === "admin" ? admin : customer;
+    const hash = await argon2.hash(password, {
+      type,
+      memoryCost: 65536,
+      timeCost: 4,
+      parallelism: 1,
+    });
+    await update("users", u.id, { password: hash });
+    const agent = request.agent(app);
+    const rejected = await mutate(agent, "post", "/api/v1/auth/login", {
+      identifier: u.email,
+      password: "incorrect-password",
+    });
+    assert.equal(rejected.status, 422);
+    assert.equal(rejected.body.error.code, "INVALID_CREDENTIALS");
+    await agent.get("/api/v1/auth/me").expect(401);
+    const authenticated = await signedIn(name);
+    const me = await authenticated.get("/api/v1/auth/me").expect(200);
+    assert.equal(me.body.data.role, name);
+    await authenticated.get("/api/v1/admin/dashboard").expect(name === "admin" ? 200 : 403);
+    assert.equal((await first("SELECT password FROM users WHERE id=?", [u.id])).password, hash);
+  });
+
+test("malformed stored Argon2 hashes reject credentials without a server error", async () => {
+  await update("users", admin.id, { password: "$argon2id$invalid" });
+  const agent = request.agent(app);
+  const result = await mutate(agent, "post", "/api/v1/auth/login", {
+    identifier: admin.email,
+    password,
+  });
+  assert.equal(result.status, 422);
+  assert.equal(result.body.error.code, "INVALID_CREDENTIALS");
+  await agent.get("/api/v1/auth/me").expect(401);
 });
 test("profile rejects duplicate identity and preserves role", async () => {
   const a = await signedIn();

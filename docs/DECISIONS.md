@@ -73,3 +73,7 @@ Acceptance trước source: runtime nhận PORT động/loopback API, worker shu
 ## D92 — Bỏ deploy, trình bày Sandbox local (06/11/2026)
 
 Owner hủy phạm vi deploy D91, yêu cầu lệnh chạy và test VNPAY Sandbox để trình bày. Acceptance trước thay đổi: gỡ Docker/Railway/runtime deploy và bước CI tương ứng, khôi phục cấu hình ứng dụng local đã kiểm chứng trước D91; giữ nguyên chức năng thanh toán, tunnel IPN local, private env/MySQL/uploads và source Laravel. README/PRD không còn hướng dẫn deploy hiện hành; hướng dẫn trình bày có lệnh rõ theo từng terminal, phân biệt tests fixture với giao dịch merchant thật. Chạy verify/E2E phù hợp, không tự gửi giao dịch, không reset/seed dữ liệu ứng dụng. D89 quyền cập nhật repo EM3 vẫn giữ; M25 đóng do owner hủy, không ghi deployed/done.
+
+## D93 — Tương thích mật khẩu tài khoản cũ (07/11/2026)
+
+Owner báo admin không đăng nhập. Kiểm tra read-only chứng minh tài khoản admin và customer cũ dùng Argon2id, trong khi login EM3 chỉ gọi bcrypt.compare; session/CSRF/database vẫn hoạt động, private env không đổi. Acceptance trước sửa: xác minh Argon2id/Argon2i và bcrypt hiện có bằng thư viện phù hợp; sai mật khẩu/hash không hợp lệ trả INVALID_CREDENTIALS, không 500; không reset hoặc tự rehash mật khẩu/data ứng dụng, không đổi quyền/session/CSRF. Test đúng/sai mật khẩu Argon2id qua login/session/admin và giữ regression bcrypt; verify/E2E trên database test. Giữ việc owner đã xóa backend/.env.example, không commit thay đổi đó.

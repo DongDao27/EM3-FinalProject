@@ -384,6 +384,29 @@
       "required_checks": ["npm run verify", "npm run test:e2e", "env hash", "diff/source checks"],
       "evidence": ["docs/VNPAY-SANDBOX.md", ".runtime/d92-verify.log", ".runtime/d92-e2e.log"],
       "notes": "Verify and full E2E23 (2.0m) passed; private env SHA unchanged. Local Sandbox settings ready; actual merchant/IPN acceptance not performed."
+    },
+    {
+      "id": "M27",
+      "title": "D93: verify legacy Argon2 passwords during EM3 login",
+      "status": "done",
+      "depends_on": ["M26"],
+      "acceptance": [
+        "Existing Argon2id/Argon2i and bcrypt credentials authenticate without resetting stored hashes",
+        "Wrong password and malformed hash fail with INVALID_CREDENTIALS; session/admin authorization preserved",
+        "Verify/E2E pass on isolated DB; preserve owner env/template deletion and application accounts"
+      ],
+      "required_checks": [
+        "npm run verify",
+        "npm run test:e2e",
+        "private env and main account preservation"
+      ],
+      "evidence": [
+        "backend/tests/integration.test.js",
+        ".runtime/d93-backend.log",
+        ".runtime/d93-verify.log",
+        ".runtime/d93-e2e.log"
+      ],
+      "notes": "Verify passed57 backend/API7/tools4/build22/typecheck/checks, E2E23 passed2.8m, audit0. Main accounts/private env unchanged; existing dev API must be restarted. Owner password not requested/tested."
     }
   ]
 }

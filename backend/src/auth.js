@@ -1,4 +1,5 @@
 import bcrypt from "bcryptjs";
+import * as argon2 from "argon2";
 import { createHmac, randomBytes } from "node:crypto";
 import { config } from "./config.js";
 import { first, insert, update, query, transaction } from "./db.js";
@@ -98,6 +99,14 @@ export async function register(req) {
   return signIn(req, await first("SELECT * FROM users WHERE id=?", [id]));
 }
 const dummyHash = bcrypt.hashSync("em3-dummy-account-password", 12);
+async function verifyPassword(password, hash) {
+  try {
+    if (/^\$argon2(?:id|i)\$/.test(hash)) return await argon2.verify(hash, password);
+    return await bcrypt.compare(password, hash.replace(/^\$2y\$/, "$2b$"));
+  } catch {
+    return false;
+  }
+}
 export async function login(req) {
   const b = validate(
       z.strictObject({ identifier: str(254), password: z.string().max(128) }),
@@ -108,10 +117,7 @@ export async function login(req) {
     identifier,
     identifier,
   ]);
-  const valid = await bcrypt.compare(
-    b.password,
-    (u?.password || dummyHash).replace(/^\$2y\$/, "$2b$"),
-  );
+  const valid = await verifyPassword(b.password, u?.password || dummyHash);
   if (!u || !valid) fail("INVALID_CREDENTIALS", "Thông tin đăng nhập không chính xác.", 422);
   return signIn(req, u);
 }

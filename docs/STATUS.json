@@ -1,11 +1,11 @@
 {
   "project": "THUTHANH-EM3",
-  "at": "2026-11-06T23:55:22+07:00",
+  "at": "2026-11-07T00:39:01+07:00",
   "project_path": "D:/THUTHANH-EM3",
   "current_task_id": "M05",
   "next_task_id": "M05",
-  "last_completed_task_id": "M26",
-  "implementation_state": "D92_local_demo_verified_deploy_removed",
+  "last_completed_task_id": "M27",
+  "implementation_state": "D93_legacy_password_fix_local_verified",
   "stack": {
     "frontend": "Next.js",
     "backend": "Express",
@@ -17,7 +17,7 @@
   "ready_for_local_testing": true,
   "ready_for_source_commit": true,
   "last_verified_commit": null,
-  "git_dirty": false,
+  "git_dirty": true,
   "branch": "main",
   "deployment_scope": "cancelled_by_owner_D92_local_only",
   "configuration": {
@@ -729,5 +729,20 @@
     "guide": "docs/VNPAY-SANDBOX.md",
     "private_env": "unchanged_SHA256",
     "commit_scope": "Checkpoint written immediately before source commit; Git HEAD identifies committed D92 source."
+  },
+  "legacy_password_fix": {
+    "status": "local_verified",
+    "root_cause": "Existing Argon2id hashes rejected by bcrypt-only login",
+    "backend_tests": 57,
+    "verify": "passed",
+    "e2e": {
+      "passed": 23,
+      "duration": "2.8m"
+    },
+    "main_accounts": "not_modified",
+    "private_env": "unchanged_SHA256",
+    "runtime": "owner must restart existing dev process",
+    "owner_uncommitted_change": "backend/.env.example deleted before task; preserved and excluded from commit",
+    "audit": "0 vulnerabilities"
   }
 }

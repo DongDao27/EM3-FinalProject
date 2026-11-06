@@ -107,3 +107,7 @@ D91 CI receipt: source fdf719a256614c743962695ceb1dfe03615d663f pushed main; Act
 ## 2026-11-06T23:55:22+07:00 - M26/D92: local Sandbox demo
 
 Owner cancelled deploy; M25 cancelled without public hosting. Removed deployment-only files and restored local app/CI/scripts from pre-D91 source. Added three-terminal demo commands and payment scenarios to VNPAY-SANDBOX.md. Verify passed (54 backend, 7 API, 4 payment tools, build22/typecheck/checks); Full E2E23 passed (2.0m); env SHA unchanged. No private env/application data changes, provider transaction or Laravel changes.
+
+## 2026-11-07T00:39:01+07:00 - M27/D93: legacy password compatibility
+
+Read-only diagnosis found existing admin/customer hashes use Argon2id while EM3 login only verified bcrypt. Added pinned argon2 dependency and hash-dispatched verification, no automatic rehash/reset. Regression tests cover correct/wrong Argon2 credentials, persisted session/admin permissions and malformed hash handling. Full verify passed57 backend/API7/tools4/build22/typecheck/checks; E2E23 passed2.8m; audit0. Main users unchanged, private env SHA unchanged. Owner deletion backend/.env.example preserved and excluded from staging. Running API must be restarted to load fix.
