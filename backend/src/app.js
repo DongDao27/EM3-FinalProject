@@ -81,6 +81,7 @@ import {
 } from "./admin.js";
 export const app = express();
 app.disable("x-powered-by");
+app.set("trust proxy", config.trustProxy);
 app.set("query parser", "simple");
 app.use(helmet({ crossOriginResourcePolicy: { policy: "same-origin" } }));
 app.use((req, res, next) => {

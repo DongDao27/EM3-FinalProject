@@ -1,11 +1,11 @@
 {
   "project": "THUTHANH-EM3",
-  "at": "2026-11-06T04:08:57+07:00",
+  "at": "2026-11-06T23:21:11+07:00",
   "project_path": "D:/THUTHANH-EM3",
-  "current_task_id": "M05",
-  "next_task_id": "M05",
+  "current_task_id": "M25",
+  "next_task_id": "M25",
   "last_completed_task_id": "M24",
-  "implementation_state": "D90_final_project_readme_refined",
+  "implementation_state": "D91_source_verified_public_hosting_pending",
   "stack": {
     "frontend": "Next.js",
     "backend": "Express",
@@ -16,10 +16,10 @@
   "frontend_gate": "local_verified",
   "ready_for_local_testing": true,
   "ready_for_source_commit": true,
-  "last_verified_commit": "e8d1f073b3d02344fd94c0c4a2b396ecd8e1f993",
-  "git_dirty": false,
+  "last_verified_commit": null,
+  "git_dirty": true,
   "branch": "main",
-  "deployment_scope": "excluded_by_owner_request_D73",
+  "deployment_scope": "D91_owner_authorized_EM3_Sandbox_free_or_trial_only",
   "configuration": {
     "private_env": "backend/.env",
     "clone_template": "backend/.env.example",
@@ -680,5 +680,28 @@
     "checks": "Prettier, repo structure, local markdown links, diff-check passed",
     "business_tests": "not_rerun_docs_only; D88/D89 verified source unchanged",
     "publication_authorization": "D89 continues; Git remote HEAD identifies latest docs commit"
+  },
+  "sandbox_deployment": {
+    "status": "in_progress",
+    "hosting": "Railway free/trial selected; account not connected",
+    "public_url": null,
+    "budget": "free_or_trial_no_paid_upgrade",
+    "local_verify": {
+      "backend": 59,
+      "frontend_api": 7,
+      "payment_tools": 4,
+      "runtime": 3,
+      "build_routes": 22,
+      "typecheck": "passed",
+      "source_checks": "passed"
+    },
+    "browser_e2e": {
+      "passed": 23,
+      "duration": "2.0m",
+      "log": ".runtime/d91-e2e-final.log"
+    },
+    "docker": "not_run_local_no_Docker; CI planned",
+    "merchant_ipn": "not_verified",
+    "private_env": "preserved"
   }
 }

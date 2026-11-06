@@ -1,21 +1,21 @@
 import dotenv from "dotenv";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { deploymentSettings } from "./deployment.js";
 export const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 dotenv.config({ path: path.join(root, ".env"), quiet: true });
 const e = process.env;
+const deployment = deploymentSettings(e, root);
 export const config = {
   env: e.NODE_ENV || "development",
   port: Number(e.PORT || 8001),
   host: e.HOST || "localhost",
-  frontend: e.FRONTEND_URL || "http://localhost:3001",
+  frontend: deployment.frontend,
+  trustProxy: deployment.trustProxy,
   secret: e.SESSION_SECRET,
   cookie: e.SESSION_COOKIE || "thuthanh_em3_session",
   secure: e.COOKIE_SECURE === "true",
-  storageRoot:
-    e.NODE_ENV === "test"
-      ? path.resolve(root, "../.runtime/test-storage")
-      : path.join(root, "storage"),
+  storageRoot: deployment.storageRoot,
   db: {
     host: e.DB_HOST || "127.0.0.1",
     port: Number(e.DB_PORT || 3306),
@@ -36,7 +36,7 @@ export const config = {
     secret: e.VNPAY_HASH_SECRET,
     paymentUrl: e.VNPAY_PAYMENT_URL,
     queryUrl: e.VNPAY_QUERY_URL,
-    returnUrl: e.VNPAY_RETURN_URL,
+    returnUrl: deployment.returnUrl,
     queryIp: e.VNPAY_QUERY_IP || "127.0.0.1",
   },
 };

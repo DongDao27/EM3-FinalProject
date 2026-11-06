@@ -13,6 +13,9 @@
     "npm": ">=10"
   },
   "scripts": {
+    "start": "node scripts/start-production.mjs",
+    "test:runtime": "node --test scripts/tests/production-processes.test.mjs",
+    "deploy:smoke": "node scripts/deploy-smoke.mjs",
     "test:figma": "node scripts/test-figma.cjs",
     "dev": "node scripts/dev.mjs",
     "dev:api": "npm run dev --workspace backend",
@@ -29,7 +32,7 @@
     "db:migrate:test": "npm run migrate:test --workspace backend",
     "db:seed": "npm run seed --workspace backend",
     "admin": "npm run admin --workspace backend --",
-    "test": "npm run test:payment-tools && npm run test:backend && npm run test:frontend",
+    "test": "npm run test:payment-tools && npm run test:runtime && npm run test:backend && npm run test:frontend",
     "test:backend": "npm test --workspace backend",
     "test:frontend": "npm run test:api --workspace frontend",
     "test:http": "node scripts/http-smoke.mjs",

@@ -55,4 +55,4 @@ Chạy tuần tự; tests sử dụng database riêng và mô phỏng thanh toá
 
 ## Tài liệu
 
-[Cài đặt & vận hành](docs/SETUP.md) · [REST API](docs/API.md) · [Database](docs/DATABASE.md) · [VNPAY Sandbox](docs/VNPAY-SANDBOX.md) · [Thiết kế Figma](design/figma/HUONG-DAN.md)
+[Cài đặt & vận hành](docs/SETUP.md) · [Deploy Sandbox](docs/DEPLOY-SANDBOX.md) · [REST API](docs/API.md) · [Database](docs/DATABASE.md) · [VNPAY Sandbox](docs/VNPAY-SANDBOX.md) · [Thiết kế Figma](design/figma/HUONG-DAN.md)

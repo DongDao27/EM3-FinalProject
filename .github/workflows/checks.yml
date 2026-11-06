@@ -31,3 +31,22 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
       - run: npm audit --omit=dev
+      - name: Build deployable Sandbox container
+        run: docker build --tag em3-sandbox .
+      - name: Verify production web/API/worker and HTTPS cookies
+        run: |
+          docker run --detach --name em3-sandbox-smoke --network host \
+            -e PORT=3101 -e NODE_ENV=production \
+            -e HOST=127.0.0.1 -e TRUST_PROXY=loopback -e COOKIE_SECURE=true \
+            -e FRONTEND_URL=https://em3-ci.example.test \
+            -e SESSION_SECRET=ci-isolated-deployment-session-secret-not-for-real-use \
+            -e DB_HOST=127.0.0.1 -e DB_PORT=3306 -e DB_DATABASE=thu_thanh_em3_test \
+            -e DB_USERNAME=root -e DB_PASSWORD=em3-ci-only-password \
+            -e VNPAY_ENV=sandbox -e VNPAY_DEFERRED=true \
+            em3-sandbox
+          node scripts/deploy-smoke.mjs http://127.0.0.1:3101 --simulate-https-proxy
+      - name: Container diagnostics and cleanup
+        if: always()
+        run: |
+          docker logs em3-sandbox-smoke 2>/dev/null || true
+          docker rm --force em3-sandbox-smoke 2>/dev/null || true

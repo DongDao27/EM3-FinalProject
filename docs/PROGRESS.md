@@ -97,3 +97,7 @@ Owner authorized repo DongDao27/EM3-FinalProject. Initial source commit e8d1f073
 ## D90 — 2026-11-06T04:08:57+07:00 — M24 done
 
 README EM3 rewritten as concise final-project overview/stack/features/quickstart/testing/docs with CI badge; Dxx history removed from README. Original detailed DB/env/admin/worker/payment/SMTP instructions preserved in docs/SETUP.md with adjusted relative links. Prettier/check-repo/local links/diff-check passed; no new business tests for docs-only change. D89 authorization retained for commit/push main; private env/data/app/UI unchanged. Source test SHA e8d1f07 remains verified; current Git HEAD gives docs commit hash.
+
+## 2026-11-06T23:21:11+07:00 — M25/D91: chuẩn bị deploy Sandbox
+
+Owner chọn miễn phí/trial. Thêm Docker/Railway, supervisor web/API/worker, HTTPS proxy/session, volume và guard Sandbox-only. Verify local passed: backend59/API7/payment-tools4/runtime3, build22/typecheck/source checks. Full E2E chạy lại đạt23/23 trong2.0m sau lượt trước bị ngắt; máy chưa có Docker, sẽ kiểm bằng CI. Chưa kết nối tài khoản Railway/public URL hoặc giao dịch merchant IPN thật; M25 in_progress. Không sửa env private/main database hay source Laravel.

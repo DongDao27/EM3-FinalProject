@@ -343,6 +343,30 @@
       "required_checks": ["Prettier", "check-repo", "markdown local links", "diff-check"],
       "evidence": ["README.md", "docs/SETUP.md", ".runtime/d90-doc-check.log"],
       "notes": "Docs-only; business tests not repeated. D89 publication authorization continues."
+    },
+    {
+      "id": "M25",
+      "title": "D91: deploy EM3 demo with VNPAY Sandbox on free/trial hosting",
+      "phase": "DEPLOYMENT",
+      "status": "in_progress",
+      "depends_on": ["M24"],
+      "acceptance": [
+        "Portable web/API/worker container; HTTPS sessions, persistent storage and Sandbox-only config",
+        "Local verify and full E2E pass; Docker build/smoke verified in CI",
+        "Connected hosting account, public HTTPS smoke and actual merchant Sandbox IPN acceptance"
+      ],
+      "required_checks": [
+        "npm run verify",
+        "npm run test:e2e",
+        "Docker build and production smoke",
+        "public HTTPS and provider callback acceptance"
+      ],
+      "evidence": [
+        ".runtime/d91-verify.log",
+        "docs/DEPLOY-SANDBOX.md",
+        ".runtime/d91-e2e-final.log"
+      ],
+      "notes": "Local verify and full E2E23 passed. Docker build/smoke awaiting CI. Railway account/public URL and real merchant Sandbox IPN pending; no paid upgrade."
     }
   ]
 }

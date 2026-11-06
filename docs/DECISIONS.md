@@ -62,3 +62,10 @@ Cho phép commit/push riêng EM3 tới https://github.com/DongDao27/EM3-FinalPro
 ## D90 — README cho final project (06/11/2026)
 
 Owner yêu cầu README chuyên nghiệp, ngắn gọn cho bài final. Phạm vi EM3 vừa publish: giữ overview/công nghệ/chức năng/quickstart/test/docs; bỏ lịch sử Dxx và ghi chú nội bộ khỏi README, chuyển chi tiết setup hiện có sang docs/SETUP.md để không mất hướng dẫn DB/secret/admin/SMTP. Acceptance trước thay README: đúng stack/source/scripts, đủ link setup, không bịa tên môn/nhóm/giảng viên, links và Prettier/check-repo đạt; docs-only, không chạy lại business E2E. Quyền publish D89 tiếp tục cho cập nhật repo này; không sửa bản khác/env/data.
+
+## D91 — Deploy EM3 với VNPAY Sandbox (06/11/2026)
+
+Owner đã chọn ưu tiên hosting miễn phí/trial cho demo. Không tự nâng cấp gói trả phí; public deployment vẫn cần tài khoản Railway đã kết nối.
+
+Owner yêu cầu deploy EM3 và chỉ thanh toán Sandbox, chưa có hosting. Đang xác nhận ngân sách và tài khoản hosting; Railway là phương án đang đánh giá, chưa có kết nối tài khoản được xác nhận. Cho phép chuẩn bị deployment portable/container, HTTPS/session proxy, storage persistence, runner web/API/worker và tài liệu; không bật payment production, không tạo tài nguyên trả phí khi chưa được chấp thuận. D73 exclude-deploy được thay bằng phạm vi deploy Sandbox mới này; D89 quyền commit/push repo EM3 vẫn có.
+Acceptance trước source: runtime nhận PORT động/loopback API, worker shutdown/failure rõ; cookie HTTPS chỉ trust loopback proxy opt-in, origin/CSRF giữ; env/config không vào image/Git, uploads dùng volume, database không reset; production NODE_ENV vẫn ép VNPAY sandbox; tests meaningful cho config/proxy/session và supervisor, full verify/E2E; Docker build chỉ gọi passed khi chạy được; deploy/callback thật chỉ completed sau host/merchant/IPN xác nhận. Thiếu hosting/login không chặn chuẩn bị source, checkpoint in_progress nếu chưa public URL.

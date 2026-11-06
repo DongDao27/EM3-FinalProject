@@ -1,3 +1,11 @@
+# Hiện hành D91 — 2026-11-06T23:21:11+07:00
+
+M25 in_progress: chuẩn bị Railway trial/free cho EM3 + VNPAY Sandbox. Source runtime/container/HTTPS/storage và hướng dẫn docs/DEPLOY-SANDBOX.md đã thêm. Verify local backend59/API7/tools4/runtime3/build22/typecheck và full E2E23 (2.0m) passed. Máy chưa có Docker; cần kiểm Docker build/smoke trên CI sau push theo quyền D89. Env private giữ nguyên SHA; generated next-env đã phục hồi đúng HEAD.
+
+Chưa kết nối Railway, chưa public URL, chưa callback merchant thật. Tiếp theo: hoàn tất E2E, kiểm staged source/secrets/env, commit/push EM3, quan sát CI. Sau khi kết nối hosting mới tạo app/MySQL/volume, migrate/seed/admin, public smoke và cấu hình Return/IPN Sandbox. Không nâng gói trả phí, không tiền thật; không reset DB/env/storage. Giữ backend/.env và dữ liệu local.
+
+## Lịch sử bàn giao
+
 # Hiện hành D90 — 2026-11-06T04:08:57+07:00
 
 M24 done: README ngắn gọn cho final project, setup dài chuyển docs/SETUP.md. Docs checks passed; không đổi application/env/data. Commit/push README theo quyền D89 vẫn giữ. Bản zip source local được dựng lại sau commit; Git HEAD/remote là hash tài liệu mới, last_verified_commit giữ SHA source app e8d1f07 đã test. Không cần lặp backend/E2E chỉ vì sửa văn bản.

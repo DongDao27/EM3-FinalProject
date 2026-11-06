@@ -4,7 +4,7 @@ Nhà sách gồm storefront, tài khoản customer và admin: tra cứu catalog,
 
 Next.js làm giao diện; Express/MySQL quyết định quyền, tiền, tồn và trạng thái. Session cookie/CSRF, không lưu bearer token trong localStorage. Quy tắc chi tiết tại [DATABASE.md](DATABASE.md), hợp đồng tại [API.md](API.md).
 
-Chỉ chạy và kiểm thử local. Không có POS khách vãng lai, marketplace, voucher engine, tự hoàn tiền, tích hợp vận chuyển, native app hoặc merchant QR tại quầy. SMTP thật và giao dịch merchant/IPN thật cần kiểm chứng riêng; fixture không thay thế nghiệm thu provider.
+Theo D91, phạm vi gồm chạy local và deploy demo HTTPS bằng hosting miễn phí/trial với VNPAY Sandbox. Không có POS khách vãng lai, marketplace, voucher engine, tự hoàn tiền, tích hợp vận chuyển, native app hoặc merchant QR tại quầy. SMTP thật và giao dịch merchant/IPN thật cần kiểm chứng riêng; fixture không thay thế nghiệm thu provider.
 
 Tiêu chí local: clone có thể cài từ một env backend; migrate/seed/admin/dev/verify/E2E chạy được, database test riêng, không mất dữ liệu/private env/storage. Kết quả thực tế tại [STATUS.json](STATUS.json).
 
