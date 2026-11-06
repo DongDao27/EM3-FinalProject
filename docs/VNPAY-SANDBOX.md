@@ -2,6 +2,46 @@
 
 IPN là thông báo từ server VNPAY tới backend, khác với trang trình duyệt quay về. Bản này dùng đường dẫn HTTPS tạm để nhận IPN; ứng dụng và database vẫn chạy trên máy bạn.
 
+## Chạy nhanh trước buổi trình bày
+
+Trên máy hiện tại, nếu MySQL portable chưa chạy:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File D:\ThuThanh-WebDesign\scripts\mysql-local.ps1 -Action start
+```
+
+Mở ba terminal PowerShell, giữ hai terminal đầu chạy trong suốt buổi demo:
+
+```powershell
+# Terminal 1: web + API + worker
+cd D:\THUTHANH-EM3
+npm run dev
+```
+
+```powershell
+# Terminal 2: nhận IPN từ VNPAY
+cd D:\THUTHANH-EM3
+npm run payment:tunnel
+```
+
+```powershell
+# Terminal 3: kiểm tra trước khi thanh toán
+cd D:\THUTHANH-EM3
+npm run payment:check
+```
+
+Mở http://localhost:3001. URL IPN do terminal 2 in ra phải được đăng ký với merchant Sandbox; mỗi lần mở Quick Tunnel mới có thể cần cập nhật lại. Không cần Railway hoặc deploy website. Tunnel IPN chỉ phục vụ callback; không dùng nó làm URL web để quét QR từ điện thoại.
+
+Kiểm thử tự động trước buổi trình bày (chạy tuần tự, không dùng database ứng dụng):
+
+```powershell
+cd D:\THUTHANH-EM3
+npm run verify
+npm run test:e2e
+```
+
+Kịch bản demo: thanh toán NCB thành công → xem đơn cập nhật; hủy tại VNPAY → đơn vẫn chưa thanh toán; tải lại trang kết quả → không thu/trừ tồn lần hai; admin nhận tiền mặt cho đơn pickup → hoàn tất. Đối với QR tại quầy, demo trên trình duyệt cùng máy; điện thoại không truy cập được `localhost` của máy tính. IPN/query thật của merchant cần kiểm chứng riêng, các tests tự động chỉ dùng fixture.
+
 ## 1. Chạy ứng dụng
 
 Bật MySQL và chạy từ thư mục gốc:

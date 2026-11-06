@@ -1,3 +1,9 @@
+# D92 local Sandbox demo - 2026-11-06T23:55:22+07:00
+
+M26 done local: owner cancelled deploy. M25 cancelled; no Railway/account action needed. Deployment-only source/config removed; local app and CI restored. Demo commands in docs/VNPAY-SANDBOX.md. Verify passed54 backend/API7/tools4/build22/typecheck/checks; full E2E23 passed (2.0m), env SHA unchanged. Next: run dev, payment:tunnel and payment:check for presentation; register current IPN URL with merchant. Source update published under D89; Git HEAD is authoritative receipt hash. No actual Sandbox merchant transaction/IPN verified. Keep backend/.env, MySQL schemas/uploads and all Laravel source.
+
+## Previous handoff (history)
+
 # Hiện hành D91 — 2026-11-06T23:21:11+07:00
 
 M25 in_progress: chuẩn bị Railway trial/free cho EM3 + VNPAY Sandbox. Source runtime/container/HTTPS/storage và hướng dẫn docs/DEPLOY-SANDBOX.md đã thêm. Verify local backend59/API7/tools4/runtime3/build22/typecheck và full E2E23 (2.0m) passed. Source commit fdf719a256614c743962695ceb1dfe03615d663f đã push; Actions42251787897 success, gồm Docker build và production HTTPS smoke web/API/worker. Env private giữ nguyên SHA; generated next-env đã phục hồi đúng HEAD.

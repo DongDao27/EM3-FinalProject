@@ -348,7 +348,7 @@
       "id": "M25",
       "title": "D91: deploy EM3 demo with VNPAY Sandbox on free/trial hosting",
       "phase": "DEPLOYMENT",
-      "status": "in_progress",
+      "status": "cancelled",
       "depends_on": ["M24"],
       "acceptance": [
         "Portable web/API/worker container; HTTPS sessions, persistent storage and Sandbox-only config",
@@ -363,12 +363,27 @@
       ],
       "evidence": [
         ".runtime/d91-verify.log",
-        "docs/DEPLOY-SANDBOX.md",
+        "fdf719a:docs/DEPLOY-SANDBOX.md (historical source)",
         ".runtime/d91-e2e-final.log",
         "fdf719a256614c743962695ceb1dfe03615d663f",
         "https://github.com/DongDao27/EM3-FinalProject/actions/runs/42251787897"
       ],
-      "notes": "Local verify/E2E23 and GitHub Actions full verify/E2E/container build/production HTTPS smoke passed. Owner will log in to Railway; account connection/public URL and actual merchant Sandbox IPN remain pending. No paid upgrade."
+      "notes": "Owner cancelled deployment in D92. No cloud resources/public URL created. Deployment-only source removed; historical CI receipt remains valid for D91 only."
+    },
+    {
+      "id": "M26",
+      "title": "D92: remove deployment and prepare local VNPAY Sandbox presentation",
+      "phase": "LOCAL_DEMO",
+      "status": "done",
+      "depends_on": ["M24"],
+      "acceptance": [
+        "Deployment-only code/config/docs removed, local app restored",
+        "Document terminal commands, Sandbox NCB flow, IPN registration and fixture limitations",
+        "Verify/E2E pass with private env and application data preserved"
+      ],
+      "required_checks": ["npm run verify", "npm run test:e2e", "env hash", "diff/source checks"],
+      "evidence": ["docs/VNPAY-SANDBOX.md", ".runtime/d92-verify.log", ".runtime/d92-e2e.log"],
+      "notes": "Verify and full E2E23 (2.0m) passed; private env SHA unchanged. Local Sandbox settings ready; actual merchant/IPN acceptance not performed."
     }
   ]
 }

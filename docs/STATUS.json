@@ -1,11 +1,11 @@
 {
   "project": "THUTHANH-EM3",
-  "at": "2026-11-06T23:21:11+07:00",
+  "at": "2026-11-06T23:55:22+07:00",
   "project_path": "D:/THUTHANH-EM3",
-  "current_task_id": "M25",
-  "next_task_id": "M25",
-  "last_completed_task_id": "M24",
-  "implementation_state": "D91_source_verified_public_hosting_pending",
+  "current_task_id": "M05",
+  "next_task_id": "M05",
+  "last_completed_task_id": "M26",
+  "implementation_state": "D92_local_demo_verified_deploy_removed",
   "stack": {
     "frontend": "Next.js",
     "backend": "Express",
@@ -16,10 +16,10 @@
   "frontend_gate": "local_verified",
   "ready_for_local_testing": true,
   "ready_for_source_commit": true,
-  "last_verified_commit": "fdf719a256614c743962695ceb1dfe03615d663f",
+  "last_verified_commit": null,
   "git_dirty": false,
   "branch": "main",
-  "deployment_scope": "D91_owner_authorized_EM3_Sandbox_free_or_trial_only",
+  "deployment_scope": "cancelled_by_owner_D92_local_only",
   "configuration": {
     "private_env": "backend/.env",
     "clone_template": "backend/.env.example",
@@ -682,8 +682,8 @@
     "publication_authorization": "D89 continues; Git remote HEAD identifies latest docs commit"
   },
   "sandbox_deployment": {
-    "status": "in_progress",
-    "hosting": "Owner confirmed not connected; will log in to Railway",
+    "status": "cancelled_by_owner_D92",
+    "hosting": "Not connected; no deployment created; no further hosting actions authorized",
     "public_url": null,
     "budget": "free_or_trial_no_paid_upgrade",
     "local_verify": {
@@ -710,5 +710,24 @@
       "url": "https://github.com/DongDao27/EM3-FinalProject/actions/runs/42251787897"
     },
     "receipt_scope": "App source verified at source_commit; following receipt commit changes documentation only."
+  },
+  "local_demo": {
+    "status": "local_verified",
+    "verify": {
+      "backend": 54,
+      "frontend_api": 7,
+      "payment_tools": 4,
+      "build_routes": 22,
+      "typecheck": "passed",
+      "checks": "passed"
+    },
+    "e2e": {
+      "passed": 23,
+      "duration": "2.0m"
+    },
+    "merchant_ipn": "not_verified",
+    "guide": "docs/VNPAY-SANDBOX.md",
+    "private_env": "unchanged_SHA256",
+    "commit_scope": "Checkpoint written immediately before source commit; Git HEAD identifies committed D92 source."
   }
 }

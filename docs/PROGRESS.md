@@ -103,3 +103,7 @@ README EM3 rewritten as concise final-project overview/stack/features/quickstart
 Owner chọn miễn phí/trial. Thêm Docker/Railway, supervisor web/API/worker, HTTPS proxy/session, volume và guard Sandbox-only. Verify local passed: backend59/API7/payment-tools4/runtime3, build22/typecheck/source checks. Full E2E chạy lại đạt23/23 trong2.0m sau lượt trước bị ngắt; máy chưa có Docker, sẽ kiểm bằng CI. Chưa kết nối tài khoản Railway/public URL hoặc giao dịch merchant IPN thật; M25 in_progress. Không sửa env private/main database hay source Laravel.
 
 D91 CI receipt: source fdf719a256614c743962695ceb1dfe03615d663f pushed main; Actions42251787897 success (verify, full E2E23, audit, Docker build and production web/API/worker HTTPS-cookie smoke). Public Railway/merchant IPN acceptance not run. Owner confirmed hosting account not connected and will log in. Private env SHA unchanged; local source ZIP from D90 predates deployment changes, use GitHub main as current submission source.
+
+## 2026-11-06T23:55:22+07:00 - M26/D92: local Sandbox demo
+
+Owner cancelled deploy; M25 cancelled without public hosting. Removed deployment-only files and restored local app/CI/scripts from pre-D91 source. Added three-terminal demo commands and payment scenarios to VNPAY-SANDBOX.md. Verify passed (54 backend, 7 API, 4 payment tools, build22/typecheck/checks); Full E2E23 passed (2.0m); env SHA unchanged. No private env/application data changes, provider transaction or Laravel changes.
